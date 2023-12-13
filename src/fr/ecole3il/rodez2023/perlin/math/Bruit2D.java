@@ -5,8 +5,11 @@ package fr.ecole3il.rodez2023.perlin.math;
  * Elle définit des méthodes permettant d'obtenir des valeurs de bruit en deux dimensions.
  */
 public abstract class Bruit2D {
+
+    /*  La résolution pour la génération de résolution */
+    private double resolution;
     
-    /** La graine utilisée pour la génération du bruit */
+    /* La graine utilisée pour la génération du bruit */
     private final long graine;
     
     /**
@@ -15,6 +18,7 @@ public abstract class Bruit2D {
      */
     public Bruit2D(long graine, double resolution) {
         this.graine = graine;
+        this.resolution = resolution;
     }
     
     /**
@@ -31,6 +35,18 @@ public abstract class Bruit2D {
      */
     public long getGraine() {
         return graine;
+    }
+
+    /*  Getteur de resolution */
+    public double getresolution()
+    {
+        return resolution;
+    }
+
+    /*  Setteur de resolution */
+    public void setresolution(double resolution)
+    {
+        this.resolution = resolution;
     }
 
 }
