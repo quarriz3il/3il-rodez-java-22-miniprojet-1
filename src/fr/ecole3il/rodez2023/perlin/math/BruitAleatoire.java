@@ -18,6 +18,6 @@ public class BruitAleatoire extends Bruit2D {
     public double bruit2D(double x, double y)
     {
         Random random = new Random();
-        return (double)random.nextInt(100);
+        return random.nextDouble(100);
     }
 }
