@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Random;
+import java.util.Arrays;
 
 import javax.imageio.ImageIO;
 
@@ -66,7 +67,8 @@ public class Utils {
      */
     public static double min(int width, int height) {
     	// pas le temps, j'ai mes exos de chimie à finir
-    	return 1;
+
+        return Math.min(width, height);
     }
 
     /**
@@ -89,6 +91,22 @@ public class Utils {
         }
 
         return contenu.toString();
-    }    
+    }
+    
+    public static int[] melanger(int[] tableau) 
+    {
+        Random random = new Random();
+
+        for(int i = tableau.length -1; i > 0; i--)
+        {
+            int j = random.nextInt(i + 1);
+
+            int temp = tableau[i];
+            tableau[i] = tableau[j];
+            tableau[j] = temp;
+        }
+
+        return tableau;
+    }
 }
 
