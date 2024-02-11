@@ -1,6 +1,7 @@
 package fr.ecole3il.rodez2023.perlin.terrain.elements;
 
 import fr.ecole3il.rodez2023.perlin.Utils;
+import fr.ecole3il.rodez2023.perlin.terrain.visualisation.DetermineurTerrain;
 
 public enum TypeTerrain {
     //On veux changer des images, donc on pour ça on a besoin e récupérer des images
@@ -30,4 +31,5 @@ public enum TypeTerrain {
     {
         return nomFichier;
     }
+
 }

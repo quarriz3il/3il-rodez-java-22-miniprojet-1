@@ -1,5 +1,7 @@
 package fr.ecole3il.rodez2023.perlin.terrain.elements;
 
+import fr.ecole3il.rodez2023.perlin.terrain.visualisation.DetermineurTerrain;
+
 public class Terrain {
 
     private double hydrometrie;
@@ -8,7 +10,7 @@ public class Terrain {
 
     public Terrain(double hydrometrie, double altitude, double temperature) throws MauvaiseValeurException
     {
-        if(isGoodValue(hydrometrie,0,1) || isGoodValue(altitude,-1,1) || isGoodValue(temperature,0,1))
+        if(isGoodValue(hydrometrie,0,1) && isGoodValue(altitude,-1,1) && isGoodValue(temperature,0,1))
         {
             this.hydrometrie = hydrometrie;
             this.altitude = altitude;
@@ -43,4 +45,10 @@ public class Terrain {
             }
             return false;
     }
+
+    public TypeTerrain getTypeTerrain(DetermineurTerrain dt)
+    {
+
+    }
+
 }
