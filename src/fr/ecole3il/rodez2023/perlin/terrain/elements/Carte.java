@@ -19,7 +19,7 @@ public class Carte {
         this.terrains = generateurCarte.genererCarte(largeur, hauteur);
     }
 
-    Carte(String donneesCarte)
+    public Carte(String donneesCarte)
     {
         Scanner scanner = new Scanner(donneesCarte);
 

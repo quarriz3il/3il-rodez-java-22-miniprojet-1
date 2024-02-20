@@ -48,7 +48,7 @@ public class Terrain {
 
     public TypeTerrain getTypeTerrain(DetermineurTerrain dt)
     {
-
+        return dt.determinerTerrain(altitude, hydrometrie, temperature);
     }
 
 }
