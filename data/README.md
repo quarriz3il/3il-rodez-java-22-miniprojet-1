@@ -13,3 +13,18 @@ Reponse : Un type double, car les différentes informations peuvent prendre des 
 4 ) Question : pourquoi sortir, selon vous, ce bout d'algorithme de la classe ?
 
 Reponse : Pour faciliter la maintenabilité du code. Lorsque l'on souhaite apporter des modification au code on peux le modifier qu'une fois au lieu de l e modifier dans tous les éléments
+
+Où j'en suis : 
+Le Projet fonctionne, le bruit de Perlin et la génération de carte (Aléatoir et perlin) fonctionne.
+Il manque les texte + les bonus que je n'ai pas fais
+
+Ce que j'en pense du projet : 
+Faire le gros du projet en période d'entreprise est très bien (bcp temps libre pour le faire)
+Projet très intéressant qui permet de coder en java + décuvert Perlin qui est plutôt cool à connaître
+La Difficulté est facile (même si j'ai galéré, en vrai c'est moi), vous avez coder tous les truc compliquer (Perlin + GUI)
+Les étapes du projet sont bien expliqué
+Même si j'ai reçu de l'aide, je trouve dommage que des gens qui ont commencé le projet lundi et finisse aujourd'hui avec un fichier helpers à 2Go ont survolé tout le projet.
+
+Amélioration :
+J'aimerais touché la prochaine fois au gui
+

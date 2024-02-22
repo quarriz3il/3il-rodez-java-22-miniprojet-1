@@ -28,8 +28,6 @@ public class Terrain {
             this.altitude = altitude;
             this.temperature = temperature;
         }
-
-       
     }
 
     /**  
