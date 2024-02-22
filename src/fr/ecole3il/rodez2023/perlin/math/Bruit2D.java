@@ -37,13 +37,19 @@ public abstract class Bruit2D {
         return graine;
     }
 
-    /*  Getteur de resolution */
+    /**  
+     * Méthode permettant d'obtenir la resolution utilisé pour la génération du bruit
+     * @return La résolution utilisée pour la génération du bruit.
+     */
     public double getresolution()
     {
         return resolution;
     }
 
-    /*  Setteur de resolution */
+    /**
+     * Méthode permettant de modifier la resolution utilisé pour la génération du bruit 
+     * @param  resolution La résolution utilisée pour la génération du bruit.
+     */
     public void setresolution(double resolution)
     {
         this.resolution = resolution;

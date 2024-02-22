@@ -40,9 +40,9 @@ public class ManipulateurCarte {
             for (int y = 0; y < carte.getHauteur(); y++) {
                 for (int x = 0; x < carte.getLargeur(); x++) {
                     Terrain terrain = carte.getTerrain(x, y);
-                    writer.write(terrain.getAltitude() + " ");
-                    writer.write(terrain.getHydrometrie() + " ");
-                    writer.write(terrain.getTemperature() + "\n");
+                    writer.write(terrain.gethydrometrie() + " ");
+                    writer.write(terrain.getaltitude() + " ");
+                    writer.write(terrain.gettemperature() + "\n");
                 }
             }
         } catch (IOException e) {
