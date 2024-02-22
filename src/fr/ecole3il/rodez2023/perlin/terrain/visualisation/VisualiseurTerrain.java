@@ -6,15 +6,26 @@ import fr.ecole3il.rodez2023.perlin.terrain.elements.TypeTerrain;
 
 public abstract class VisualiseurTerrain {
 
+    /*Carte qui à été généré */
     private Carte carte;
+    /*Création de l'objet détermineurTerrain, on va l'utiliser pour sa méthode */
     private DetermineurTerrain determineurTerrain;
 
+    /** Constructeur VisualiseurTerrain, qui va permettre de donner des valeurs à mes 2 attributs
+     * @param carte
+     * @param determineurTerrain
+     */
     public VisualiseurTerrain(Carte carte, DetermineurTerrain determineurTerrain) 
     {
         this.carte = carte;
         this.determineurTerrain = determineurTerrain;
     }
 
+    /**Méthode qui va donné l'état de température de la case
+     * @param x
+     * @param y
+     * @return L'état de température
+     */
     public TempératureAffichee getTemperatureAffichee(int x, int y){
         Terrain terrain = carte.getTerrain(x, y);
 
@@ -31,6 +42,11 @@ public abstract class VisualiseurTerrain {
         return TempératureAffichee.CHAUD;
     }
 
+    /**Méthode qui va donné l'état d'hydrométrie de la case
+     * @param x
+     * @param y
+     * @return L'état d'hydrométrie
+     */
     public HydrometrieAffichee getHydrometrieAffichee(int x, int y) {
         Terrain terrain = carte.getTerrain(x, y);
 
@@ -43,6 +59,11 @@ public abstract class VisualiseurTerrain {
         return HydrometrieAffichee.HUMIDE;
     }
 
+    /**Méthode qui va donné l'état d'altitude de la case
+     * @param x
+     * @param y
+     * @return L'état de altitude
+     */
     public AltitudeAffichee getAltitudeAffichee(int x, int y) {
         Terrain terrain = carte.getTerrain(x, y);
 
@@ -64,9 +85,15 @@ public abstract class VisualiseurTerrain {
         return AltitudeAffichee.ELEVEE;
     }
 
+    /**
+     * la méthode Va donner le type de terrain de la case
+     * @param x
+     * @param y
+     * @return le type de terrain
+     */
     public TypeTerrain getTypeTerrain(int x, int y) {
         Terrain terrain = carte.getTerrain(x, y);
-        return determineurTerrain.determinerTerrain(terrain.gethydrometrie(),terrain.getaltitude(), terrain.gettemperature());
+        return determineurTerrain.determinerTerrain(terrain.getaltitude(), terrain.gethydrometrie(), terrain.gettemperature());
     }
 
     public Terrain getTerrain(int x, int y) {

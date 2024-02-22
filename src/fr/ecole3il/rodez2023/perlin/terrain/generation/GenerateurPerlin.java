@@ -11,22 +11,28 @@ import fr.ecole3il.rodez2023.perlin.terrain.elements.Terrain;
 
 public class GenerateurPerlin extends GenerateurCarte{
 
-    BruitPerlin2D Bruit2Dhydrometrie;
-    BruitPerlin2D Bruit2Daltitude;
-    BruitPerlin2D Bruit2Dtemperature;
+    /*La graine qui va permettre de généré la map */
+    private long graine;
 
+    /**Constructeur de la classe, permet de récupéré la valeur de la graine pour un attribut
+     * @param graine
+     */
     public GenerateurPerlin(long graine)
     {
         super(graine);
-     
-        Bruit2Dhydrometrie = new BruitPerlin2D(graine, 1.0);
-        Bruit2Daltitude = new BruitPerlin2D(graine * 2, 1.0);;
-        Bruit2Dtemperature = new BruitPerlin2D(graine * 4, 1.0);;
+        this.graine = graine;    
     }
 
+    /**Cette méthode va généré un terrain, grâçe au bruit de perlin qui va généré des valeur pour l'altitute, l'hydrométrie et la température 
+     * 
+     */
     @Override
     protected Terrain genererTerrain(int i, int j, int largeur, int hauteur)
     {
+        BruitPerlin2D Bruit2Dhydrometrie = new BruitPerlin2D(graine, 1.0);
+        BruitPerlin2D Bruit2Daltitude = new BruitPerlin2D(graine * 2, 1.0);
+        BruitPerlin2D Bruit2Dtemperature = new BruitPerlin2D(graine * 4, 1.0);
+        
         double x = (double) i / largeur;
         double y = (double) j / hauteur;
         double hydrometrie = Bruit2Dhydrometrie.bruit2D(x,y);

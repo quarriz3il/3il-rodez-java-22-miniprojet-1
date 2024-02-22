@@ -29,9 +29,7 @@ public class Terrain {
             this.temperature = temperature;
         }
 
-        else{
-            throw new MauvaiseValeurException("Mauvaise valeurs");
-        }
+       
     }
 
     /**  
